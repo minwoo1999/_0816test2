@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example._0816test2.Mapper.MemberMapper">
+
+    <select id="getUserList" resultType="com.example._0816test2.Dto.Member">
+        SELECT *
+        FROM book
+    </select>
+
+    <select id="getItem" resultType="com.example._0816test2.Dto.Item">
+
+        SELECT *
+        FROM item
+        order by id
+    </select>
+
+    <insert id="insertItem" keyProperty="id">
+
+        <selectKey keyProperty="id" resultType="int" order="BEFORE">
+
+            SELECT
+            COALESCE(MAX(id),0)+1 AS id FROM item
+        </selectKey>
+
+        INSERT INTO item
+        (id,itemname,price,quantity)
+        VALUES(
+        #{id}, #{itemname}, #{price}, #{quantity})
+
+
+    </insert>
+
+    <select id="getItem_to_Item_id" resultType="com.example._0816test2.Dto.Item">
+        select *
+        from item
+        where id = #{id}
+
+    </select>
+
+    <update id="update_Item">
+        update item
+        set itemname = #{itemname},
+            price =#{price},
+            quantity =#{quantity}
+        where id =#{id}
+
+    </update>
+
+
+</mapper>

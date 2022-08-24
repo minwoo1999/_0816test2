@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="안녕하세요+${data}"></p>
+
+<tbody>
+<tr th:each="list : ${member}">
+    <td th:text="${list.bno}">번호</td>
+    <td th:text="${list.title}">제목</td>
+    <td th:text="${list.publisher}">출판사</td>
+    <td th:text="${list.author}">저자</td>
+    <td th:text="${list.price}">가격</td><br>
+</tr>
+</tbody>
+</body>
+</html>
