@@ -1,4 +1,4 @@
-# _0816test2
+# _인텔리제이 인프런 상품관리 토이프로젝트
 infrun Toy_Project
 인프런 김영환선생님의 강의를 듣고 DB와 Thymeleaf를 이용해서 만든 상품관리
 
