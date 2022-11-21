@@ -1,4 +1,4 @@
-####  인프런강의 상품관리프로젝트
+# 인프런강의 상품관리프로젝트
 
 ![캡처](https://user-images.githubusercontent.com/79193811/186302716-203adb99-9df7-4bb7-bae9-3bafe158503f.PNG)
 
